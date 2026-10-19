@@ -36,7 +36,7 @@ const enter = (frame: number, duration: number) =>
 const Scene: React.FC<{
   children: React.ReactNode;
   background?: string;
-}> = ({ children, background = ink }) => {
+}> = ({ children, background = "transparent" }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const opacity = enter(frame, durationInFrames);
