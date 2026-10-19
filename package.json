@@ -1,0 +1,21 @@
+{
+  "name": "global-transkey-video-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plantillas de video social para Global TransKey e iGOLD con Remotion",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render:igold": "remotion render src/index.ts IGoldPromo out/igold-demo.mp4",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "remotion": "^5.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^5.0.0",
+    "@types/react": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}
