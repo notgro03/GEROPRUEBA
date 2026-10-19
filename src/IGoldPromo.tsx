@@ -50,7 +50,7 @@ const Scene: React.FC<{
     <AbsoluteFill
       style={{
         background,
-        color: cream,
+        color: background === cream ? ink : cream,
         opacity,
         transform: `translateY(${rise}px)`,
         padding: "118px 88px 132px",
@@ -109,6 +109,7 @@ const Headline: React.FC<{ children: React.ReactNode; size?: number }> = ({
 
 export const IGoldPromo: React.FC<{ promo: Promo }> = ({ promo }) => {
   const hasVideo = Boolean(promo.sourceVideo);
+  const frame = useCurrentFrame();
 
   return (
     <AbsoluteFill style={{ background: ink }}>
@@ -161,9 +162,7 @@ export const IGoldPromo: React.FC<{ promo: Promo }> = ({ promo }) => {
       <Sequence from={150} durationInFrames={210}>
         <Scene background={cream}>
           <Eyebrow>Más oportunidades para tu taller</Eyebrow>
-          <Headline size={78}>
-            Vehículos que tus clientes ya manejan.
-          </Headline>
+          <Headline size={78}>Vehículos que tus clientes ya manejan.</Headline>
           <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 62 }}>
             {promo.vehicles.map((vehicle, index) => (
               <div
@@ -179,7 +178,7 @@ export const IGoldPromo: React.FC<{ promo: Promo }> = ({ promo }) => {
                   background: "#ffffff",
                   borderRadius: 18,
                   boxShadow: "0 10px 35px rgba(7,26,53,.08)",
-                  transform: `translateX(${interpolate(useCurrentFrame(), [index * 7, index * 7 + 18], [40, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)`,
+                  transform: `translateX(${interpolate(frame, [150 + index * 7, 168 + index * 7], [40, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)`,
                 }}
               >
                 <span style={{ color: gold }}>0{index + 1}</span>
