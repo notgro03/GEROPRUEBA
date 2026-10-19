@@ -11,7 +11,7 @@ Proyecto de práctica para producir videos verticales reutilizables con **Codex 
 
 ```powershell
 npm install
-npx skills add remotion-dev/skills
+npx skills add remotion-dev/skills --agent codex --skill remotion-best-practices --yes --copy
 npm run dev
 ```
 
@@ -39,4 +39,4 @@ Abrí siempre esta carpeta como proyecto. Codex lee `AGENTS.md` como las reglas 
 
 ## Licencia de Remotion
 
-Revisá la licencia oficial antes de usar Remotion en producción comercial: sus condiciones dependen del tamaño y tipo de organización. La composición y este código de práctica no incluyen música ni recursos de terceros.
+Antes de usar Remotion 4.0.537 en producción comercial, revisá los términos de licencia que aplican a esta versión. La composición de práctica no incluye música ni recursos de terceros. La composición y este código de práctica no incluyen música ni recursos de terceros.
